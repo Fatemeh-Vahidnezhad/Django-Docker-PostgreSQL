@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     # local apps
     'accounts',
+    'pages',
 
     # third party
     'allauth',
@@ -161,14 +162,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # email for allauth
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # django-allauth registration settings
-ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS =10
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 10
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"
-ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 4
+# ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+# ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 4
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_SESSION_REMEMBER = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 
 
 # CustomUser model
